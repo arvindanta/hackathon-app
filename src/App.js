@@ -1,9 +1,9 @@
-import { FwButton } from "@freshworks/crayons/react";
 import "./App.css";
+import TemplateList from "./components/TemplateList/TemplateList";
 function App() {
   return (
     <div className="App">
-      <FwButton onClick={() => alert("button clicked")}>Button</FwButton>
+      <TemplateList />
     </div>
   );
 }
