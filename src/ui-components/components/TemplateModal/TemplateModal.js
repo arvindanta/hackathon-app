@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { FwButton } from "@freshworks/crayons/react";
 import "./TemplateModal.css";
 
-export default function TemplateModal({ listitem, image }) {
+export default function TemplateModal({ listitem, image, onUseTemplate }) {
   useEffect(() => {
     document.body.classList.add("effect");
     return () => {
@@ -11,7 +11,7 @@ export default function TemplateModal({ listitem, image }) {
   }, []);
   return (
     <div>
-      <div className="light-box" style={{ visibility: "visible" }}>
+      <div className="light-box">
         <div className="box-wrapper">
           <div className="box">
             <div className="header__container">
@@ -19,7 +19,7 @@ export default function TemplateModal({ listitem, image }) {
               <FwButton
                 color="primary"
                 size="small"
-                onFwClick={() => alert("go to builder")}
+                onFwClick={() => onUseTemplate(listitem)}
               >
                 Use this template
               </FwButton>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import CreateFromTemplateScreen from "./ui-components/screens/CreateFromTemplateScreen/CreateFromTemplateScreen";
 import CreateScreen from "./ui-components/screens/CreateScreen/CreateScreen";
 import MetricsScreen from "./ui-components/screens/MetricsScreen/MetricsScreen";
 
@@ -14,7 +15,7 @@ function App() {
     switch (type) {
       case "CATEGORY_CHANGE":
         // nav to create from scratch screen
-        setScreen(objItem.value);
+        setScreen(objItem?.data?.value);
         break;
       case "SKIP":
         // nav to create from scratch screen
@@ -24,6 +25,10 @@ function App() {
         // objItem.selectedCategory - string representing the category
         // objItem.selectedMetrics - array of strings representing the selected questions
         // objItem.selectedRelatedMetrics  - array of strings representing the selected related questions
+        break;
+
+      case "USE_TEMPLATE":
+        console.log("use template ", objItem);
         break;
       default:
         break;
@@ -36,8 +41,14 @@ function App() {
         {screen === "create" && (
           <CreateScreen onChange={screen1ChangeHandler} />
         )}
-        {screen === "template" && (
+        {screen === "scratch" && (
           <MetricsScreen
+            selectedScreen={screen}
+            onChange={navigateScreenHandler}
+          />
+        )}
+        {screen === "template" && (
+          <CreateFromTemplateScreen
             selectedScreen={screen}
             onChange={navigateScreenHandler}
           />

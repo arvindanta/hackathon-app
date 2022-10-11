@@ -4,7 +4,7 @@ import TemplateModal from "../TemplateModal/TemplateModal";
 import "./TemplateListItem.css";
 import image from "./img/Template.png";
 
-function TemplateListItem({ listitem }) {
+function TemplateListItem({ listitem, onUseTemplate }) {
   const [showPopup, setShowPopup] = useState(false);
 
   const itemRef = useRef(null);
@@ -19,7 +19,6 @@ function TemplateListItem({ listitem }) {
 
   useEffect(() => {
     window.addEventListener("click", (event) => {
-      console.log(event.target.className);
       if (
         event.target.className === "wrapper" ||
         event.target.className === "box-wrapper" ||
@@ -46,10 +45,7 @@ function TemplateListItem({ listitem }) {
         <div className="listitem__body">
           <div className="header">{listitem.name}</div>
 
-          <div
-            className="listitem__imagecontainer"
-            onMouseEnter={(e) => show(e)}
-          >
+          <div className="listitem__imagecontainer" onClick={(e) => show(e)}>
             <img
               className="listitem__image"
               src={listitem.thumbnailImage || image}
@@ -62,14 +58,19 @@ function TemplateListItem({ listitem }) {
           <FwButton
             color="secondary"
             size="small"
-            onFwClick={() => alert("move to report builder page")}
+            onFwClick={() => onUseTemplate(listitem)}
           >
             Use this template
           </FwButton>
         </div>
       </div>
-      {JSON.stringify({ showPopup })}
-      {showPopup && <TemplateModal listitem={listitem} image={image} />}
+      {showPopup && (
+        <TemplateModal
+          listitem={listitem}
+          image={image}
+          onUseTemplate={onUseTemplate}
+        />
+      )}
     </div>
   );
 }

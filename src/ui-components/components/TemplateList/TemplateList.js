@@ -8,7 +8,7 @@ import {
 import TemplateListItem from "../TemplateListItem/TemplateListItem";
 import "./TemplateList.css";
 
-function TemplateList({ templates }) {
+function TemplateList({ templates, onUseTemplate }) {
   const [filteredTemplates, setFilteredTemplates] = useState(templates);
   const [results, setResults] = useState(templates);
   const [search, setSearch] = useState("");
@@ -20,6 +20,7 @@ function TemplateList({ templates }) {
   };
 
   const tagSelect = (e, t) => {
+    setSearch("");
     let arr = filteredTags.slice();
     if (arr.includes(t)) {
       arr = arr.filter((f) => f !== t);
@@ -43,7 +44,7 @@ function TemplateList({ templates }) {
   }, [search, filteredTemplates]);
 
   return (
-    <div>
+    <div className="list__headercontainer">
       <div className="list__header">
         <div>
           {templateTags.map((t) => {
@@ -58,18 +59,14 @@ function TemplateList({ templates }) {
             );
           })}
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "400px",
-          }}
-        >
+        <div className="header__right">
           <FwInput
             style={{ width: "180px" }}
             placeholder="Search by name"
             iconLeft="search"
             clearInput
+            onFwInputClear={(e) => setSearch("")}
+            value={search}
             onFwInput={(e) => doSearch(e.target.value)}
           />
 
@@ -80,12 +77,15 @@ function TemplateList({ templates }) {
         </div>
       </div>
 
-      <br />
-      <br />
-
       <div className="image_grid">
         {results.map((tli, i) => {
-          return <TemplateListItem key={i} listitem={tli} />;
+          return (
+            <TemplateListItem
+              key={i}
+              listitem={tli}
+              onUseTemplate={onUseTemplate}
+            />
+          );
         })}
       </div>
     </div>

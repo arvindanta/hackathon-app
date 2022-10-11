@@ -12,10 +12,19 @@
 .image_grid {
     display: flex;
     gap: 114px;
-    margin-top: 20px;
+    margin-top: 15px;
     flex-wrap: wrap;
 }
 .list__header{
     display: flex;
     justify-content: space-between;
+}
+.header__right {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+.list__headercontainer {
+    margin-top: 16px;
+    margin-bottom: 20px;
 }

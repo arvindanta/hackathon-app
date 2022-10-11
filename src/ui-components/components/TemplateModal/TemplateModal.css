@@ -40,7 +40,7 @@
   /* Effect */
   .effect .light-box {
     opacity: 1;
-    /* visibility: visible; */
+    visibility: visible;
   }
   .effect .light-box .box {
     transform: scale(1);
