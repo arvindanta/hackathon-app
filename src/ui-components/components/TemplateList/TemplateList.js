@@ -14,6 +14,7 @@ function TemplateList({ templates, onUseTemplate }) {
   const [search, setSearch] = useState("");
   const templateTags = [...new Set(templates?.map((t) => t.module) ?? [])];
   const [filteredTags, setFilteredTags] = useState([]);
+  const [isAll, setisAll] = useState(false);
 
   const doSearch = (val) => {
     setSearch(val);
@@ -21,7 +22,10 @@ function TemplateList({ templates, onUseTemplate }) {
 
   const tagSelect = (e, t) => {
     setSearch("");
+    setisAll(false);
     let arr = filteredTags.slice();
+    console.log("arr ", arr);
+
     if (arr.includes(t)) {
       arr = arr.filter((f) => f !== t);
       e.target.classList.remove("fw_pill--active");
@@ -29,11 +33,42 @@ function TemplateList({ templates, onUseTemplate }) {
       arr.push(t);
       e.target.classList.add("fw_pill--active");
     }
+
     setFilteredTags([...new Set(arr)]);
 
     const fil = templates.filter((f) => arr.includes(f.module));
     setFilteredTemplates((fil.length && fil) || templates);
   };
+
+  useEffect(() => {
+    let arr = filteredTags.slice();
+    if (isAll) {
+      arr = templateTags;
+      const pills = document.querySelectorAll(".list__header fw-pill");
+      pills.forEach((e) => {
+        e.classList.add("fw_pill--active");
+      });
+      const pills1 = document.querySelectorAll(
+        ".list__header fw-pill[data-label='All']"
+      );
+      pills1.forEach((e) => {
+        e.classList.add("fw_pill--active");
+      });
+    } else {
+      const pills1 = document.querySelectorAll(
+        ".list__header fw-pill[data-label='All']"
+      );
+      pills1.forEach((e) => {
+        e.classList.remove("fw_pill--active");
+      });
+      arr = arr.filter((f) => f !== "All");
+    }
+
+    setFilteredTags([...new Set(arr)]);
+
+    const fil = templates.filter((f) => arr.includes(f.module));
+    setFilteredTemplates((fil.length && fil) || templates);
+  }, [isAll]);
 
   useEffect(() => {
     setResults(
@@ -47,10 +82,21 @@ function TemplateList({ templates, onUseTemplate }) {
     <div className="list__headercontainer">
       <div className="list__header">
         <div>
+          <FwPill
+            data-label={"All"}
+            className="fw_pill"
+            onClick={(e) => {
+              setSearch("");
+              setisAll((f) => !f);
+            }}
+          >
+            All
+          </FwPill>
           {templateTags.map((t) => {
             return (
               <FwPill
                 key={t}
+                data-label={t}
                 className="fw_pill"
                 onClick={(e) => tagSelect(e, t)}
               >
