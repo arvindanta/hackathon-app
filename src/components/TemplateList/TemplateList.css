@@ -1,4 +1,21 @@
-.pill {
+.fw_pill {
     --fw-pill-color: rgba(0, 0, 0, 1);
     margin-right: 10px;
+    cursor: pointer;
+}
+.fw_pill--active {
+    --fw-pill-color: rgb(239, 241, 244);
+    --fw-pill-background-color	: rgba(44, 92, 197, 1);
+    cursor: pointer;
+}
+
+.image_grid {
+    display: flex;
+    gap: 114px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.list__header{
+    display: flex;
+    justify-content: space-between;
 }
