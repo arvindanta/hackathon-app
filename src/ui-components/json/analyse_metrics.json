@@ -1,0 +1,328 @@
+{
+  "createOptions": [
+    {
+      "value": "template",
+      "bgColor": "#7B55FF",
+      "image": "assets/template_thumbnail.png",
+      "name": "Create from template",
+      "description": "For quickly creating desired metrics"
+    },
+    {
+      "value": "scratch",
+      "bgColor": "#2AB7CB",
+      "image": "assets/scratch_thumbnail.png",
+      "name": "Build from scratch",
+      "description": "For defining your own metrics"
+    }
+  ],
+  "metricCategories": [
+    {
+      "value": "ticket",
+      "name": "Tickets",
+      "image": "assets/ticket_icon.png"
+    },
+    {
+      "value": "contact",
+      "name": "Contacts",
+      "image": "assets/contact_icon.png"
+    },
+    {
+      "value": "company",
+      "name": "Companies",
+      "image": "assets/company_icon.png"
+    },
+    {
+      "value": "survey",
+      "name": "Surveys",
+      "image": "assets/survey_icon.png"
+    },
+    {
+      "value": "article",
+      "name": "Articles",
+      "image": "assets/article_icon.png"
+    },
+    {
+      "value": "bot",
+      "name": "Answerbot",
+      "image": "assets/bot_icon.png"
+    }
+  ],
+  "analyseCategories": {
+    "ticket": {
+      "metrics": [
+        {
+          "value": "ticket_1",
+          "name": "How many tickets do we get everyday for each priority?"
+        },
+        {
+          "value": "ticket_2",
+          "name": "On average, how long does it take to resolve a ticket?"
+        },
+        {
+          "value": "ticket_3",
+          "name": "Which agent group receives the most tickets?"
+        },
+        {
+          "value": "ticket_4",
+          "name": "On average, how many tickets are reopend?"
+        },
+        {
+          "value": "ticket_5",
+          "name": "How many tickets breach SLA every month?"
+        },
+        {
+          "value": "ticket_6",
+          "name": "How many tickets do we get by phone, email and other sources?"
+        },
+        {
+          "value": "ticket_7",
+          "name": "On an average, what is the first response time for tickets?"
+        },
+        {
+          "value": "ticket_8",
+          "name": "How many tickets are closed everyday in this month?"
+        }
+      ],
+      "related": [
+        {
+          "value": "relTicket_1",
+          "name": "Show me company wise ticket data"
+        },
+        {
+          "value": "relTicket_2",
+          "name": "How many tickets are assigned for each agent?"
+        }
+      ]
+    },
+    "contact": {
+      "metrics": [
+        {
+          "value": "contact_1",
+          "name": "How many tickets do we get everyday for each priority?"
+        },
+        {
+          "value": "contact_2",
+          "name": "On average, how long does it take to resolve a ticket?"
+        },
+        {
+          "value": "contact_3",
+          "name": "Which agent group receives the most tickets?"
+        },
+        {
+          "value": "contact_4",
+          "name": "On average, how many tickets are reopend?"
+        },
+        {
+          "value": "contact_5",
+          "name": "How many tickets breach SLA every month?"
+        },
+        {
+          "value": "contact_6",
+          "name": "How many tickets do we get by phone, email and other sources?"
+        },
+        {
+          "value": "contact_7",
+          "name": "On an average, what is the first response time for tickets?"
+        },
+        {
+          "value": "contact_8",
+          "name": "How many tickets are closed everyday in this month?"
+        }
+      ],
+      "related": [
+        {
+          "value": "relcontact_1",
+          "name": "Show me company wise ticket data"
+        },
+        {
+          "value": "relcontact_2",
+          "name": "How many tickets are assigned for each agent?"
+        }
+      ]
+    },
+    "company": {
+      "metrics": [
+        {
+          "value": "company_1",
+          "name": "How many tickets do we get everyday for each priority?"
+        },
+        {
+          "value": "company_2",
+          "name": "On average, how long does it take to resolve a ticket?"
+        },
+        {
+          "value": "company_3",
+          "name": "Which agent group receives the most tickets?"
+        },
+        {
+          "value": "company_4",
+          "name": "On average, how many tickets are reopend?"
+        },
+        {
+          "value": "company_5",
+          "name": "How many tickets breach SLA every month?"
+        },
+        {
+          "value": "company_6",
+          "name": "How many tickets do we get by phone, email and other sources?"
+        },
+        {
+          "value": "company_7",
+          "name": "On an average, what is the first response time for tickets?"
+        },
+        {
+          "value": "company_8",
+          "name": "How many tickets are closed everyday in this month?"
+        }
+      ],
+      "related": [
+        {
+          "value": "relcompany_1",
+          "name": "Show me company wise ticket data"
+        },
+        {
+          "value": "relcompany_2",
+          "name": "How many tickets are assigned for each agent?"
+        }
+      ]
+    },
+    "survey": {
+      "metrics": [
+        {
+          "value": "survey_1",
+          "name": "How many tickets do we get everyday for each priority?"
+        },
+        {
+          "value": "survey_2",
+          "name": "On average, how long does it take to resolve a ticket?"
+        },
+        {
+          "value": "survey_3",
+          "name": "Which agent group receives the most tickets?"
+        },
+        {
+          "value": "survey_4",
+          "name": "On average, how many tickets are reopend?"
+        },
+        {
+          "value": "survey_5",
+          "name": "How many tickets breach SLA every month?"
+        },
+        {
+          "value": "survey_6",
+          "name": "How many tickets do we get by phone, email and other sources?"
+        },
+        {
+          "value": "survey_7",
+          "name": "On an average, what is the first response time for tickets?"
+        },
+        {
+          "value": "survey_8",
+          "name": "How many tickets are closed everyday in this month?"
+        }
+      ],
+      "related": [
+        {
+          "value": "relsurvey_1",
+          "name": "Show me company wise ticket data"
+        },
+        {
+          "value": "relsurvey_2",
+          "name": "How many tickets are assigned for each agent?"
+        }
+      ]
+    },
+    "article": {
+      "metrics": [
+        {
+          "value": "article_1",
+          "name": "How many tickets do we get everyday for each priority?"
+        },
+        {
+          "value": "article_2",
+          "name": "On average, how long does it take to resolve a ticket?"
+        },
+        {
+          "value": "article_3",
+          "name": "Which agent group receives the most tickets?"
+        },
+        {
+          "value": "article_4",
+          "name": "On average, how many tickets are reopend?"
+        },
+        {
+          "value": "article_5",
+          "name": "How many tickets breach SLA every month?"
+        },
+        {
+          "value": "article_6",
+          "name": "How many tickets do we get by phone, email and other sources?"
+        },
+        {
+          "value": "article_7",
+          "name": "On an average, what is the first response time for tickets?"
+        },
+        {
+          "value": "article_8",
+          "name": "How many tickets are closed everyday in this month?"
+        }
+      ],
+      "related": [
+        {
+          "value": "relarticle_1",
+          "name": "Show me company wise ticket data"
+        },
+        {
+          "value": "relarticle_2",
+          "name": "How many tickets are assigned for each agent?"
+        }
+      ]
+    },
+    "bot": {
+      "metrics": [
+        {
+          "value": "bot_1",
+          "name": "How many tickets do we get everyday for each priority?"
+        },
+        {
+          "value": "bot_2",
+          "name": "On average, how long does it take to resolve a ticket?"
+        },
+        {
+          "value": "bot_3",
+          "name": "Which agent group receives the most tickets?"
+        },
+        {
+          "value": "bot_4",
+          "name": "On average, how many tickets are reopend?"
+        },
+        {
+          "value": "bot_5",
+          "name": "How many tickets breach SLA every month?"
+        },
+        {
+          "value": "bot_6",
+          "name": "How many tickets do we get by phone, email and other sources?"
+        },
+        {
+          "value": "bot_7",
+          "name": "On an average, what is the first response time for tickets?"
+        },
+        {
+          "value": "bot_8",
+          "name": "How many tickets are closed everyday in this month?"
+        }
+      ],
+      "related": [
+        {
+          "value": "relbot_1",
+          "name": "Show me company wise ticket data"
+        },
+        {
+          "value": "relbot_2",
+          "name": "How many tickets are assigned for each agent?"
+        }
+      ]
+    }
+  }
+}

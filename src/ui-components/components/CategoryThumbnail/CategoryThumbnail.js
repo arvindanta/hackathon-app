@@ -2,13 +2,18 @@ import React from "react";
 import "./CategoryThumbnail.css";
 
 export default function CategoryThumbnail(props) {
-  const { data } = props;
+  const { data, onChange } = props;
+
+  function clickHandler(event) {
+    onChange(data);
+  }
+
   const styleThumbnail = {
     backgroundColor: data?.bgColor,
   };
 
   return (
-    <div className="category-thumbnail">
+    <div className="category-thumbnail" onClick={clickHandler}>
       <span
         className="category-thumbnail-image-container"
         style={styleThumbnail}
