@@ -43,8 +43,6 @@ function App() {
           />
         )}
       </div>
-
-      {/* <TemplateList /> */}
     </div>
   );
 }
