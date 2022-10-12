@@ -10,10 +10,7 @@ export default function MetricCard(props) {
   }, [selected]);
 
   function clickHandler(event) {
-    if (!checked) {
-      setChecked(true);
-      onChange({ selected: true, data: data });
-    }
+    onChange({ selected: !checked, data: data });
   }
 
   let strBaseClass = "metric-card";

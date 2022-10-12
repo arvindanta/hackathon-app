@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./MetricAnalyseCard.css";
 
 export default function MetricAnalyseCard(props) {
-  const { data, selected, onChange } = props;
+  const { data, selected, metricType, category, onChange } = props;
   const [checked, setChecked] = useState(selected);
 
   useEffect(() => {
@@ -12,7 +12,12 @@ export default function MetricAnalyseCard(props) {
   function clickHandler(event) {
     const boolSelected = !checked;
     setChecked(boolSelected);
-    onChange({ selected: boolSelected, data: data });
+    onChange({
+      selected: boolSelected,
+      data: data,
+      metricType: metricType,
+      category: category,
+    });
   }
 
   let strBaseClass = "metric-analyse-card";

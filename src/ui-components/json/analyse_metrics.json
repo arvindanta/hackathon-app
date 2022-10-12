@@ -37,6 +37,11 @@
       "image": "assets/survey_icon.png"
     },
     {
+      "value": "timesheets",
+      "name": "Timesheets",
+      "image": "assets/ticket_icon.png"
+    },
+    {
       "value": "article",
       "name": "Articles",
       "image": "assets/article_icon.png"
@@ -98,45 +103,25 @@
       "metrics": [
         {
           "value": "contact_1",
-          "name": "How many tickets do we get everyday for each priority?"
+          "name": "How many tickets are created by each contact"
         },
         {
           "value": "contact_2",
-          "name": "On average, how long does it take to resolve a ticket?"
+          "name": "How many contacts are available"
         },
         {
           "value": "contact_3",
-          "name": "Which agent group receives the most tickets?"
+          "name": "How many contacts have been created every month?"
         },
         {
           "value": "contact_4",
-          "name": "On average, how many tickets are reopend?"
-        },
-        {
-          "value": "contact_5",
-          "name": "How many tickets breach SLA every month?"
-        },
-        {
-          "value": "contact_6",
-          "name": "How many tickets do we get by phone, email and other sources?"
-        },
-        {
-          "value": "contact_7",
-          "name": "On an average, what is the first response time for tickets?"
-        },
-        {
-          "value": "contact_8",
-          "name": "How many tickets are closed everyday in this month?"
+          "name": "How many contacts create tickets every month"
         }
       ],
       "related": [
         {
           "value": "relcontact_1",
-          "name": "Show me company wise ticket data"
-        },
-        {
-          "value": "relcontact_2",
-          "name": "How many tickets are assigned for each agent?"
+          "name": "Test related contact data"
         }
       ]
     },
@@ -144,7 +129,7 @@
       "metrics": [
         {
           "value": "company_1",
-          "name": "How many tickets do we get everyday for each priority?"
+          "name": "How many companies do we get everyday for each priority?"
         },
         {
           "value": "company_2",
@@ -178,11 +163,7 @@
       "related": [
         {
           "value": "relcompany_1",
-          "name": "Show me company wise ticket data"
-        },
-        {
-          "value": "relcompany_2",
-          "name": "How many tickets are assigned for each agent?"
+          "name": "Test related company data"
         }
       ]
     },
@@ -190,91 +171,136 @@
       "metrics": [
         {
           "value": "survey_1",
-          "name": "How many tickets do we get everyday for each priority?"
+          "name": "How many surveys are updated every week this month?"
         },
         {
           "value": "survey_2",
-          "name": "On average, how long does it take to resolve a ticket?"
+          "name": "How many surveys are sent every day this month?"
         },
         {
           "value": "survey_3",
-          "name": "Which agent group receives the most tickets?"
+          "name": "List all the surveys by name"
         },
         {
           "value": "survey_4",
-          "name": "On average, how many tickets are reopend?"
+          "name": "How many survey results have been recorded during each week this month?"
         },
         {
           "value": "survey_5",
-          "name": "How many tickets breach SLA every month?"
+          "name": "How many survey results have been recorded for each choice?"
         },
         {
           "value": "survey_6",
-          "name": "How many tickets do we get by phone, email and other sources?"
+          "name": "How many survey results have been received for each survey?"
         },
         {
           "value": "survey_7",
-          "name": "On an average, what is the first response time for tickets?"
+          "name": "How many survey results have been recorded everyday?"
         },
         {
           "value": "survey_8",
-          "name": "How many tickets are closed everyday in this month?"
+          "name": "How many survey results have been received for each question?"
+        },
+        {
+          "value": "survey_9",
+          "name": "How many survey results have been recorded by each agent?"
+        },
+        {
+          "value": "survey_10",
+          "name": "How many survey results have been recorded by each group"
+        },
+        {
+          "value": "survey_11",
+          "name": "How many survey results have been recorded by each customer?"
         }
       ],
       "related": [
         {
           "value": "relsurvey_1",
-          "name": "Show me company wise ticket data"
-        },
-        {
-          "value": "relsurvey_2",
-          "name": "How many tickets are assigned for each agent?"
+          "name": "Test related survey data"
         }
       ]
+    },
+    "timesheet": {
+      "metrics": [
+        {
+          "value": "timesheet_1",
+          "name": "How many billable hours are clocked every month?"
+        },
+        {
+          "value": "timesheet_2",
+          "name": "How many timesheets are created by each agent?"
+        },
+        {
+          "value": "timesheet_3",
+          "name": "How many timesheets are created everyday?"
+        },
+        {
+          "value": "timesheet_4",
+          "name": "What is the average time clocked by each agent?"
+        }
+      ],
+      "related": []
     },
     "article": {
       "metrics": [
         {
           "value": "article_1",
-          "name": "How many tickets do we get everyday for each priority?"
+          "name": "How many articles have been modified in the past month?"
         },
         {
           "value": "article_2",
-          "name": "On average, how long does it take to resolve a ticket?"
+          "name": "List all the articles by name"
         },
         {
           "value": "article_3",
-          "name": "Which agent group receives the most tickets?"
+          "name": "How many articles are created everyday?"
         },
         {
           "value": "article_4",
-          "name": "On average, how many tickets are reopend?"
+          "name": "How many articles have been published in the last month?"
         },
         {
           "value": "article_5",
-          "name": "How many tickets breach SLA every month?"
+          "name": "How many articles have been approved in the last month?"
         },
         {
           "value": "article_6",
-          "name": "How many tickets do we get by phone, email and other sources?"
+          "name": "How many articles are available in each language?"
         },
         {
           "value": "article_7",
-          "name": "On an average, what is the first response time for tickets?"
+          "name": "Show the number of articles by each author"
         },
         {
           "value": "article_8",
-          "name": "How many tickets are closed everyday in this month?"
+          "name": "Show the number of articles by each username"
+        },
+        {
+          "value": "article_9",
+          "name": "Show the number of articles by each user type"
+        },
+        {
+          "value": "article_10",
+          "name": "How many articles have been modified in the last month?"
+        },
+        {
+          "value": "article_11",
+          "name": "How many articles are there in each folder?"
+        },
+        {
+          "value": "article_12",
+          "name": "How many articles are there for each portal?"
+        },
+        {
+          "value": "article_13",
+          "name": "How many articles are there in each category?"
         }
       ],
       "related": [
         {
           "value": "relarticle_1",
-          "name": "Show me company wise ticket data"
-        },
-        {
-          "value": "relarticle_2",
-          "name": "How many tickets are assigned for each agent?"
+          "name": "Test related article data"
         }
       ]
     },
@@ -282,45 +308,21 @@
       "metrics": [
         {
           "value": "bot_1",
-          "name": "How many tickets do we get everyday for each priority?"
+          "name": "How many questions have been created everyday?"
         },
         {
           "value": "bot_2",
-          "name": "On average, how long does it take to resolve a ticket?"
+          "name": "How many questions are created in each channel"
         },
         {
           "value": "bot_3",
-          "name": "Which agent group receives the most tickets?"
-        },
-        {
-          "value": "bot_4",
-          "name": "On average, how many tickets are reopend?"
-        },
-        {
-          "value": "bot_5",
-          "name": "How many tickets breach SLA every month?"
-        },
-        {
-          "value": "bot_6",
-          "name": "How many tickets do we get by phone, email and other sources?"
-        },
-        {
-          "value": "bot_7",
-          "name": "On an average, what is the first response time for tickets?"
-        },
-        {
-          "value": "bot_8",
-          "name": "How many tickets are closed everyday in this month?"
+          "name": "How many questions are answered "
         }
       ],
       "related": [
         {
           "value": "relbot_1",
-          "name": "Show me company wise ticket data"
-        },
-        {
-          "value": "relbot_2",
-          "name": "How many tickets are assigned for each agent?"
+          "name": "Sample related bot question"
         }
       ]
     }
