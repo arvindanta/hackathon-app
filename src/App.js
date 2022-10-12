@@ -22,9 +22,11 @@ function App() {
         break;
       case "GENERATE":
         // Using the following data - generate records
-        // objItem.selectedCategory - string representing the category
-        // objItem.selectedMetrics - array of strings representing the selected questions
-        // objItem.selectedRelatedMetrics  - array of strings representing the selected related questions
+        // objItem.selectedMetrics - structure as below
+        // {
+        //   "category1":{direct:["ticket_1", "ticket_2"], related:["relTicket_1"]},
+        //   "category2":{direct:["contact_2"], related:[]},
+        // }
         break;
 
       case "USE_TEMPLATE":
